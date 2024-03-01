@@ -1,0 +1,40 @@
+- name: Update apt cache
+  apt:
+    update_cache: yes
+
+- name: Install until
+  apt:
+    name:
+      - apt-transport-https
+      - gnupg
+      - openjdk-11-jdk
+      - dirmngr
+      - ca-certificates
+      - software-properties-common
+      - curl
+    state: present
+
+- name: Copy elasticsearch
+  copy:
+    src: "{{ home_path }}/elasticsearch-7.17.18-amd64.deb"
+    dest: "/home/jonh"
+
+- name: Install Elasticsearch deb package
+  shell: "sudo dpkg -i elasticsearch-7.17.18-amd64.deb"
+  args:
+    chdir: /home/jonh
+
+- name: Copy config file for elastic
+  copy:
+    src: ./elastic/templates/elasticsearch.yml
+    dest: /etc/elasticsearch
+    mode: 0660
+    owner: root
+    group: elasticsearch
+
+- name: Systemctl daemon reload
+  systemd:
+    daemon_reload: true
+    enabled: yes
+    name: elasticsearch.service
+    state: started

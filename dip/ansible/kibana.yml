@@ -1,0 +1,4 @@
+- hosts: kibana
+  become: yes
+  roles:
+    - kibana

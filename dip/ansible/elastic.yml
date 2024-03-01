@@ -1,0 +1,7 @@
+---
+- hosts: elastic
+  become: yes
+  roles:
+    - elastic
+  vars_files:
+    - "{{ playbook_dir }}/vars.yml"

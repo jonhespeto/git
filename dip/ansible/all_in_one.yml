@@ -1,0 +1,35 @@
+- hosts: web
+  become: yes
+  roles:
+    - nginx
+
+- hosts: web
+  become: yes
+  roles:
+    - filebeat
+
+- hosts: web
+  become: yes
+  roles:
+    - zabbix_agent
+  vars_files:
+    - "{{ playbook_dir }}/vars.yml"
+
+- hosts: zabbix
+  become: yes
+  roles:
+    - zabbix_server
+  vars_files:
+    - "{{ playbook_dir }}/vars.yml"
+
+- hosts: kibana
+  become: yes
+  roles:
+    - kibana
+
+- hosts: elastic
+  become: yes
+  roles:
+    - elastic
+  vars_files:
+    - "{{ playbook_dir }}/vars.yml"

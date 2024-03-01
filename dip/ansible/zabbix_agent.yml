@@ -1,0 +1,7 @@
+---
+- hosts: web
+  become: yes
+  roles:
+    - zabbix_agent
+  vars_files:
+    - "{{ playbook_dir }}/vars.yml"

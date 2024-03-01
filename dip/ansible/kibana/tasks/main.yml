@@ -1,0 +1,48 @@
+- name: Update apt cache
+  apt:
+    update_cache: yes
+
+- name: Install until
+  apt:
+    name:
+      - apt-transport-https
+      - gnupg
+      - openjdk-11-jdk
+      - dirmngr
+      - ca-certificates
+      - software-properties-common
+      - curl
+    state: present
+
+- name: Copy kibana
+  copy:
+    src: "/home/jonh/kibana-7.17.17-amd64.deb"
+    dest: "/home/jonh"
+
+- name: Install kibana deb package
+  shell: "sudo dpkg -i kibana-7.17.17-amd64.deb"
+  args:
+    chdir: /home/jonh
+
+- name: Copy config file for kibana
+  copy:
+    src: ./kibana/templates/kibana.yml
+    dest: /etc/kibana
+    mode: 0644
+    owner: root
+    group: root
+
+- name: restarted nginx
+  service:
+    name: nginx
+    state: restarted
+
+- name: restarted kibana
+  service:
+    name: kibana.service
+    state: restarted
+
+- name: Systemctl enable kibana
+  ansible.builtin.service:
+    name: kibana.service
+    enabled: yes

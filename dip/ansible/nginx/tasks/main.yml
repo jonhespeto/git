@@ -1,0 +1,28 @@
+- name: Update apt cache
+  apt:
+    update_cache: yes
+
+- name: Install nginx on all servers
+  apt:
+    name: nginx
+    state: latest
+    update_cache: yes
+
+- name: "Copy website index.html"
+  copy:
+    src: ./nginx/templates/index.html
+    dest: /var/www/html/index.html
+    owner: root
+    group: sudo
+    mode: "0644"
+
+- name: restart nginx
+  service:
+    name: nginx
+    state: restarted
+
+- name: nginx systemd
+  systemd:
+    name: nginx
+    enabled: yes
+    state: started

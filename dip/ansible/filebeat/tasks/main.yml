@@ -1,0 +1,26 @@
+- name: Update apt cache
+  apt:
+    update_cache: yes
+
+- name: Copy filebeat 8.12.2
+  copy:
+    src: ~/filebeat-8.12.2-amd64.deb
+    dest: /home/jonh/
+
+- name: Install filebeat
+  apt:
+    deb: /home/jonh/filebeat-8.12.2-amd64.deb
+
+- name: Copy config file for filebeat
+  copy:
+    src: ./templates/filebeat.yml
+    dest: /etc/filebeat
+    mode: 0600
+    owner: root
+    group: root
+
+- name: Systemctl daemon reload
+  systemd:
+    daemon_reload: true
+    name: filebeat.service
+    state: started
