@@ -32,13 +32,15 @@
 ![alt text](<Screenshot 2024-03-01 at 22.47.06.png>)
 
 
-
 ### Мониторинг
 Создайте ВМ, разверните на ней Zabbix. На каждую ВМ установите Zabbix Agent, настройте агенты на отправление метрик в Zabbix. 
 ![alt text](<Screenshot 2024-03-01 at 23.13.38.png>)
 ![alt text](<Screenshot 2024-03-01 at 23.15.10.png>)
 
 Настройте дешборды с отображением метрик, минимальный набор — по принципу USE (Utilization, Saturation, Errors) для CPU, RAM, диски, сеть, http запросов к веб-серверам. Добавьте необходимые tresholds на соответствующие графики.
+
+![alt text](<Screenshot 2024-03-01 at 23.45.13.png>)
+![alt text](<Screenshot 2024-03-01 at 23.44.24.png>)
 
 ### Логи
 Cоздайте ВМ, разверните на ней Elasticsearch. Установите filebeat в ВМ к веб-серверам, настройте на отправку access.log, error.log nginx в Elasticsearch.
@@ -58,3 +60,5 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 ![alt text](<Screenshot 2024-03-01 at 23.10.20.png>)
 ### Резервное копирование
 Создайте snapshot дисков всех ВМ. Ограничьте время жизни snaphot в неделю. Сами snaphot настройте на ежедневное копирование.
+![alt text](<Screenshot 2024-03-01 at 23.27.06.png>)
+![alt text](<Screenshot 2024-03-01 at 23.28.37.png>)
