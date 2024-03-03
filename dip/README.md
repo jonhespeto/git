@@ -6,7 +6,7 @@
 
 
 ### Сайт
-'Создайте две ВМ в разных зонах, установите на них сервер nginx, если его там нет. ОС и содержимое ВМ должно быть идентичным, это будут наши веб-сервера.'
+Создайте две ВМ в разных зонах, установите на них сервер nginx, если его там нет. ОС и содержимое ВМ должно быть идентичным, это будут наши веб-сервера.
 
 
 Общий вид двух web серверов в разных зонах:
@@ -16,21 +16,21 @@
 ![alt text](<img/Screenshot 2024-03-03-21.png>)
 
 
-'Используйте набор статичных файлов для сайта. Можно переиспользовать сайт из домашнего задания.'
+Используйте набор статичных файлов для сайта. Можно переиспользовать сайт из домашнего задания.
 
 
 Страничка:
 ![alt text](<img/Screenshot 2024-03-03-22.png>)
 
 
-'Создайте [Target Group](https://cloud.yandex.com/docs/application-load-balancer/concepts/target-group), включите в неё две созданных ВМ.'
+Создайте [Target Group](https://cloud.yandex.com/docs/application-load-balancer/concepts/target-group), включите в неё две созданных ВМ.
 
 
 Таргет группа:
 
 ![Alt text](<img/Screenshot 2024-03-01-1.png>)
 
-'Создайте [Backend Group](https://cloud.yandex.com/docs/application-load-balancer/concepts/backend-group), настройте backends на target group, ранее созданную. Настройте healthcheck на корень (/) и порт 80, протокол HTTP.'
+Создайте [Backend Group](https://cloud.yandex.com/docs/application-load-balancer/concepts/backend-group), настройте backends на target group, ранее созданную. Настройте healthcheck на корень (/) и порт 80, протокол HTTP.
 
 ![alt text](<img/Screenshot 2024-03-01-2.png>)
 
