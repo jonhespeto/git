@@ -7,25 +7,27 @@
 
 ### Сайт
 Создайте две ВМ в разных зонах, установите на них сервер nginx, если его там нет. ОС и содержимое ВМ должно быть идентичным, это будут наши веб-сервера.
+---
 ![alt text](<img/Screenshot 2024-03-03-19.png>)
 ![alt text](<img/Screenshot 2024-03-03-20.png>)
 ![alt text](<img/Screenshot 2024-03-03-21.png>)
-
+---
 Используйте набор статичных файлов для сайта. Можно переиспользовать сайт из домашнего задания.
+---
 ![alt text](<img/Screenshot 2024-03-03-22.png>)
-
+---
 Создайте [Target Group](https://cloud.yandex.com/docs/application-load-balancer/concepts/target-group), включите в неё две созданных ВМ.
-
+---
 ![alt text](<img/Screenshot 2024-03-01-1.png>)
-
+---
 Создайте [Backend Group](https://cloud.yandex.com/docs/application-load-balancer/concepts/backend-group), настройте backends на target group, ранее созданную. Настройте healthcheck на корень (/) и порт 80, протокол HTTP.
-
+---
 ![alt text](<img/Screenshot 2024-03-01-2.png>)
-
+---
 Создайте [HTTP router](https://cloud.yandex.com/docs/application-load-balancer/concepts/http-router). Путь укажите — /, backend group — созданную ранее.
-
+---
 ![alt text](<img/Screenshot 2024-03-01-3.png>)
-
+---
 Создайте [Application load balancer](https://cloud.yandex.com/en/docs/application-load-balancer/) для распределения трафика на веб-сервера, созданные ранее. Укажите HTTP router, созданный ранее, задайте listener тип auto, порт 80.
 
 ![alt text](<img/Screenshot 2024-03-01-4.png>)
@@ -72,6 +74,8 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 ![alt text](<img/Screenshot 2024-03-01-15.png>)
 ### Резервное копирование
 Создайте snapshot дисков всех ВМ. Ограничьте время жизни snaphot в неделю. Сами snaphot настройте на ежедневное копирование.
+---
 
+Снимки создаются каждый день в 0:15. Срок хранения 7 дней.
 ![alt text](<img/Screenshot 2024-03-01-16.png>)
 ![alt text](<img/Screenshot 2024-03-01-17.png>)
