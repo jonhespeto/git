@@ -98,6 +98,8 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 ![alt text](<img/Screenshot 2024-03-01-26.png>)
 
+![alt text](<img/Screenshot 2024-03-01-29.png>)
+
 ![alt text](<img/Screenshot 2024-03-01-10.png>)
 
 ![alt text](<img/Screenshot 2024-03-01-18.png>)
