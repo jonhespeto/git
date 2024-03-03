@@ -12,7 +12,7 @@
 
 Создайте [Target Group](https://cloud.yandex.com/docs/application-load-balancer/concepts/target-group), включите в неё две созданных ВМ.
 
-![Alt text](<img/Screenshot 2024-03-01-1.png>)
+![alt text](<img/Screenshot 2024-03-01-1.png>)
 
 Создайте [Backend Group](https://cloud.yandex.com/docs/application-load-balancer/concepts/backend-group), настройте backends на target group, ранее созданную. Настройте healthcheck на корень (/) и порт 80, протокол HTTP.
 
