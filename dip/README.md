@@ -36,7 +36,9 @@
 
 
 ### Мониторинг
-Создайте ВМ, разверните на ней Zabbix. На каждую ВМ установите Zabbix Agent, настройте агенты на отправление метрик в Zabbix. 
+Создайте ВМ, разверните на ней Zabbix. На каждую ВМ установите Zabbix Agent, настройте агенты на отправление метрик в Zabbix.
+![alt text](<img/Screenshot 2024-03-03-23.png>)
+![alt text](<img/Screenshot 2024-03-03-24.png>)
 ![alt text](<img/Screenshot 2024-03-01-6.png>)
 ![alt text](<img/Screenshot 2024-03-01-7.png>)
 
