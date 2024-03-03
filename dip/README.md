@@ -51,8 +51,8 @@
 
 Настройте дешборды с отображением метрик, минимальный набор — по принципу USE (Utilization, Saturation, Errors) для CPU, RAM, диски, сеть, http запросов к веб-серверам. Добавьте необходимые tresholds на соответствующие графики.
 
-![alt text](<img/Screenshot 2024-03-01-8.png>)
-![alt text](<img/Screenshot 2024-03-01-9.png>)
+![alt text](<Screenshot 2024-03-01-8.png>)
+![alt text](<Screenshot 2024-03-01-9.png>)
 
 ### Логи
 Cоздайте ВМ, разверните на ней Elasticsearch. Установите filebeat в ВМ к веб-серверам, настройте на отправку access.log, error.log nginx в Elasticsearch.
