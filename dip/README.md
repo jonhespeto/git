@@ -7,8 +7,12 @@
 
 ### Сайт
 Создайте две ВМ в разных зонах, установите на них сервер nginx, если его там нет. ОС и содержимое ВМ должно быть идентичным, это будут наши веб-сервера.
+![alt text](<img/Screenshot 2024-03-03-19.png>)
+![alt text](<img/Screenshot 2024-03-03-20.png>)
+![alt text](<img/Screenshot 2024-03-03-21.png>)
 
 Используйте набор статичных файлов для сайта. Можно переиспользовать сайт из домашнего задания.
+![alt text](<img/Screenshot 2024-03-03-22.png>)
 
 Создайте [Target Group](https://cloud.yandex.com/docs/application-load-balancer/concepts/target-group), включите в неё две созданных ВМ.
 
@@ -36,6 +40,8 @@
 Создайте ВМ, разверните на ней Zabbix. На каждую ВМ установите Zabbix Agent, настройте агенты на отправление метрик в Zabbix. 
 ![alt text](<img/Screenshot 2024-03-01-6.png>)
 ![alt text](<img/Screenshot 2024-03-01-7.png>)
+![alt text](<img/Screenshot 2024-03-03-23.png>)
+![alt text](<img/Screenshot 2024-03-03-24.png>)
 
 Настройте дешборды с отображением метрик, минимальный набор — по принципу USE (Utilization, Saturation, Errors) для CPU, RAM, диски, сеть, http запросов к веб-серверам. Добавьте необходимые tresholds на соответствующие графики.
 
