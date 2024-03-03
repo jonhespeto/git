@@ -9,8 +9,6 @@
 Создайте две ВМ в разных зонах, установите на них сервер nginx, если его там нет. ОС и содержимое ВМ должно быть идентичным, это будут наши веб-сервера.
 ![alt text](<img/Screenshot 2024-03-03-19.png>)
 ![alt text](<img/Screenshot 2024-03-03-20.png>)
-![alt text](<img/Screenshot 2024-03-03-21.png>)
-![alt text](<img/Screenshot 2024-03-03-22.png>)
 Используйте набор статичных файлов для сайта. Можно переиспользовать сайт из домашнего задания.
 
 Создайте [Target Group](https://cloud.yandex.com/docs/application-load-balancer/concepts/target-group), включите в неё две созданных ВМ.
@@ -36,9 +34,7 @@
 
 
 ### Мониторинг
-Создайте ВМ, разверните на ней Zabbix. На каждую ВМ установите Zabbix Agent, настройте агенты на отправление метрик в Zabbix.
-![alt text](<img/Screenshot 2024-03-03-23.png>)
-![alt text](<img/Screenshot 2024-03-03-24.png>)
+Создайте ВМ, разверните на ней Zabbix. На каждую ВМ установите Zabbix Agent, настройте агенты на отправление метрик в Zabbix. 
 ![alt text](<img/Screenshot 2024-03-01-6.png>)
 ![alt text](<img/Screenshot 2024-03-01-7.png>)
 
@@ -60,7 +56,6 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 ### Сеть
 Разверните один VPC. Сервера web, Elasticsearch поместите в приватные подсети. Сервера Zabbix, Kibana, application load balancer определите в публичную подсеть.
-
 ![alt text](<img/Screenshot 2024-03-01-12.png>)
 
 Настройте [Security Groups](https://cloud.yandex.com/docs/vpc/concepts/security-groups) соответствующих сервисов на входящий трафик только к нужным портам.
