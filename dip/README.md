@@ -92,6 +92,9 @@ http://158.160.132.175
 Cоздайте ВМ, разверните на ней Elasticsearch. Установите filebeat в ВМ к веб-серверам, настройте на отправку access.log, error.log nginx в Elasticsearch.
 
 ---
+Страничка Kibana находится тут:
+http://158.160.151.77:5601
+
 ![alt text](<img/Screenshot 2024-03-01-27.png>)
 
 ![alt text](<img/Screenshot 2024-03-01-28.png>)
@@ -138,6 +141,8 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 ![alt text](<img/Screenshot 2024-03-01-13.png>)
 
 ![alt text](<img/Screenshot 2024-03-01-14.png>)
+
+Доступ к хостам осуществляется по ssh через jump хост:
 
 ![alt text](<img/Screenshot 2024-03-01-15.png>)
 
