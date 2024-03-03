@@ -66,5 +66,6 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 ![alt text](<img/Screenshot 2024-03-01-15.png>)
 ### Резервное копирование
 Создайте snapshot дисков всех ВМ. Ограничьте время жизни snaphot в неделю. Сами snaphot настройте на ежедневное копирование.
+
 ![alt text](<img/Screenshot 2024-03-01-16.png>)
 ![alt text](<img/Screenshot 2024-03-01-17.png>)
