@@ -35,9 +35,13 @@
 Создайте [Application load balancer](https://cloud.yandex.com/en/docs/application-load-balancer/) для распределения трафика на веб-сервера, созданные ранее. Укажите HTTP router, созданный ранее, задайте listener тип auto, порт 80.
 
 ![alt text](<img/Screenshot 2024-03-01-4.png>)
+![alt text](<img/Screenshot 2024-03-01-25.png>)
 
 Протестируйте сайт
 `curl -v <публичный IP балансера>:80` 
+
+Страничка находится по адресу :
+http://158.160.132.175
 
 ![alt text](<img/Screenshot 2024-03-01-5.png>)
 
