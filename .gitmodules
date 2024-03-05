@@ -1,0 +1,3 @@
+[submodule "ter-homeworks"]
+	path = ter-homeworks
+	url = https://github.com/netology-code/ter-homeworks.git
